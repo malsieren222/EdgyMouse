@@ -19,7 +19,7 @@ if [ $file = true ]; then
 		connectivity="0"
 	else
 		echo "We are fucked, no connection."
-		connectivity="0"
+		connectivity="1"
 	fi
 	
 	X3=sudo cat $X1 | xargs 
