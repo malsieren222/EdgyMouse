@@ -30,7 +30,7 @@ if [ $file = true ]; then
 	ratiosaved=$(sudo cat $ratiofile | tr -s '\n' ' ')
 	ratiosaved=`expr $ratiosaved + 0`
 	echo ratio is $ratio while ratiofile is $ratiosaved
-	if [ "$ratio" != "$ratiosaved" ] && [ "$i" -gt '0' ];then 
+	if [ "$ratio" != "$ratiosaved" ] && [ "$i" -gt '0' ] && [ "$connectivity="0" ];then 
 		echo "Movement detected! Triggering security! "
 		echo '1' > $alarm
 	else
